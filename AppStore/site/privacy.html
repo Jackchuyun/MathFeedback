@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MathFeedback Privacy Policy</title>
+  <meta name="description" content="Privacy policy for MathFeedback.">
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f6f7fb;
+      --panel: #ffffff;
+      --text: #171923;
+      --muted: #5b6272;
+      --accent: #4f46e5;
+      --border: #e4e7ef;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #101116;
+        --panel: #181a22;
+        --text: #f2f4f8;
+        --muted: #a8adba;
+        --accent: #8b8cff;
+        --border: #2a2d38;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.65;
+      background: var(--bg);
+      color: var(--text);
+    }
+    main {
+      width: min(860px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 48px 0 64px;
+    }
+    article {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 32px;
+      box-shadow: 0 12px 40px rgb(0 0 0 / 0.06);
+    }
+    h1 { margin: 0 0 8px; font-size: clamp(2rem, 5vw, 3rem); line-height: 1.1; letter-spacing: 0; }
+    h2 { margin: 32px 0 8px; font-size: 1.25rem; }
+    p { margin: 0 0 14px; }
+    .meta { color: var(--muted); margin-bottom: 24px; }
+    a { color: var(--accent); }
+    nav { margin-bottom: 20px; }
+  </style>
+</head>
+<body>
+  <main>
+    <nav><a href="./index.html">MathFeedback</a> / Privacy Policy</nav>
+    <article>
+      <h1>MathFeedback Privacy Policy</h1>
+      <p class="meta">Last updated: June 13, 2026</p>
+      <p>MathFeedback is a local-first app for recording after-class mathematics feedback.</p>
+
+      <h2>Data Collection</h2>
+      <p>MathFeedback does not sell or share personal data. Student names, class names, notes, feedback records, ratings, homework notes, and exported reports are stored locally on the user's device by default.</p>
+
+      <h2>Data Storage</h2>
+      <p>The app stores data using Apple's SwiftData framework on the device. The developer does not operate a cloud backend for storing app data.</p>
+      <p>Users can export a JSON backup from the app and choose where to save or share it. Once exported, the user controls that file and is responsible for where it is stored.</p>
+
+      <h2>Third-Party Services</h2>
+      <p>MathFeedback does not use third-party analytics, advertising, tracking SDKs, or a developer-operated cloud backend.</p>
+      <p>If the user enters a DeepSeek API key in Settings and taps the AI generation button, the app sends the relevant feedback inputs to the DeepSeek API to generate a teacher comment. These inputs may include the lesson topic, learning content, overall rating, skill scores, homework completion, class participation, strengths, and improvement points. The DeepSeek API key is stored only in the device Keychain.</p>
+
+      <h2>Children's Data</h2>
+      <p>The app may be used by teachers or tutors to record student-related notes. This information remains on the user's device unless the user exports it, shares it, or uses the optional DeepSeek-powered AI generation feature. Users should protect their device, backups, exported reports, and DeepSeek API key appropriately.</p>
+
+      <h2>Contact</h2>
+      <p>For privacy questions or support, contact: <a href="mailto:jack_huang28@foxmail.com">jack_huang28@foxmail.com</a></p>
+
+      <h2>Updates</h2>
+      <p>This policy may be updated when the app changes. The latest policy should be published at the App Store privacy policy URL and reflected inside the app.</p>
+    </article>
+  </main>
+</body>
+</html>

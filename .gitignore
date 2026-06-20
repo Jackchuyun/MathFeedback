@@ -1,0 +1,29 @@
+# Xcode
+DerivedData/
+build/
+MathFeedback.xcodeproj/
+*.xcuserstate
+xcuserdata/
+*.moved-aside
+*.xccheckout
+*.xcscmblueprint
+
+# SwiftPM / XcodeGen
+.build/
+.swiftpm/
+
+# Signing and secrets
+*.mobileprovision
+*.p8
+*.pem
+*.key
+.env
+.env.*
+GoogleService-Info.plist
+
+# Local helper scripts and nested site repo metadata
+renew.sh
+AppStore/site/.git/
+
+# macOS
+.DS_Store

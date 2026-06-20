@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MathFeedback Support</title>
+  <meta name="description" content="Support page for MathFeedback.">
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f6f7fb;
+      --panel: #ffffff;
+      --text: #171923;
+      --muted: #5b6272;
+      --accent: #4f46e5;
+      --border: #e4e7ef;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #101116;
+        --panel: #181a22;
+        --text: #f2f4f8;
+        --muted: #a8adba;
+        --accent: #8b8cff;
+        --border: #2a2d38;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.65;
+      background: var(--bg);
+      color: var(--text);
+    }
+    main {
+      width: min(860px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 48px 0 64px;
+    }
+    article {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 32px;
+      box-shadow: 0 12px 40px rgb(0 0 0 / 0.06);
+    }
+    h1 { margin: 0 0 8px; font-size: clamp(2rem, 5vw, 3rem); line-height: 1.1; letter-spacing: 0; }
+    h2 { margin: 32px 0 8px; font-size: 1.25rem; }
+    p { margin: 0 0 14px; }
+    ul { margin-top: 8px; }
+    .meta { color: var(--muted); margin-bottom: 24px; }
+    a { color: var(--accent); }
+    nav { margin-bottom: 20px; }
+  </style>
+</head>
+<body>
+  <main>
+    <nav><a href="./index.html">MathFeedback</a> / Support</nav>
+    <article>
+      <h1>MathFeedback Support</h1>
+      <p class="meta">For help with MathFeedback, contact <a href="mailto:jack_huang28@foxmail.com">jack_huang28@foxmail.com</a>.</p>
+
+      <h2>Where is my data stored?</h2>
+      <p>All app data is stored locally on your iPhone. MathFeedback does not upload student records or feedback reports to a developer server.</p>
+
+      <h2>How do I move data to a new phone?</h2>
+      <p>Open Settings in MathFeedback, export all data as a JSON backup, save it to Files or iCloud Drive, then import the backup on the new phone.</p>
+
+      <h2>What should I do before updating or reinstalling?</h2>
+      <p>Export a backup from Settings first. Keep the backup file in a safe place.</p>
+
+      <h2>How do I report a problem?</h2>
+      <p>Email the support address above and include:</p>
+      <ul>
+        <li>iOS version</li>
+        <li>MathFeedback version</li>
+        <li>A short description of the problem</li>
+        <li>Steps to reproduce the issue, if possible</li>
+      </ul>
+    </article>
+  </main>
+</body>
+</html>
