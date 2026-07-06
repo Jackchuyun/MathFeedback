@@ -25,7 +25,6 @@ struct ContentView: View {
         }
         .task {
             #if DEBUG
-            SampleDataSeeder.seedIfNeeded(context: context)
             hasCompletedOnboarding = true
             #endif
         }
