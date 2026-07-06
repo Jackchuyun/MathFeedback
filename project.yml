@@ -22,6 +22,7 @@ targets:
       - path: Assets.xcassets
     settings:
       base:
+        DEVELOPMENT_TEAM: 7274525WDK
         INFOPLIST_KEY_CFBundleDisplayName: MathFeedback
         INFOPLIST_KEY_UIApplicationSceneManifest_Generation: "YES"
         INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents: "YES"

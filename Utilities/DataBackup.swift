@@ -172,8 +172,9 @@ struct DataBackup {
                 feedback.homework = fb["homework"] as? String ?? ""
                 feedback.homeworkCompletion = fb["homeworkCompletion"] as? Int ?? 80
                 feedback.classParticipation = fb["classParticipation"] as? Int ?? 80
+                let importContext = context
                 for oldSkill in feedback.skillScores {
-                    context.delete(oldSkill)
+                    importContext.delete(oldSkill)
                 }
                 feedback.skillScores = skills
                 if isNewFeedback {
