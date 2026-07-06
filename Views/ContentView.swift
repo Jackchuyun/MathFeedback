@@ -2,7 +2,6 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
-    @Environment(\.modelContext) private var context
     @AppStorage("hasCompletedOnboarding") private var hasCompletedOnboarding = false
 
     var body: some View {
@@ -22,11 +21,6 @@ struct ContentView: View {
             } else {
                 OnboardingView()
             }
-        }
-        .task {
-            #if DEBUG
-            hasCompletedOnboarding = true
-            #endif
         }
     }
 }
