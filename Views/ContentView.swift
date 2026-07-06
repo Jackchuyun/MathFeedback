@@ -2,6 +2,7 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
+    @Environment(\.modelContext) private var context
     @AppStorage("hasCompletedOnboarding") private var hasCompletedOnboarding = false
 
     var body: some View {
@@ -21,6 +22,39 @@ struct ContentView: View {
             } else {
                 OnboardingView()
             }
+        }
+        .task {
+            #if DEBUG
+            do {
+                for skillScore in try context.fetch(FetchDescriptor<SkillScore>()) {
+                    context.delete(skillScore)
+                }
+                for feedback in try context.fetch(FetchDescriptor<Feedback>()) {
+                    context.delete(feedback)
+                }
+                for student in try context.fetch(FetchDescriptor<Student>()) {
+                    context.delete(student)
+                }
+                for classGroup in try context.fetch(FetchDescriptor<ClassGroup>()) {
+                    context.delete(classGroup)
+                }
+                try context.save()
+
+                let students = try context.fetchCount(FetchDescriptor<Student>())
+                let classes = try context.fetchCount(FetchDescriptor<ClassGroup>())
+                let feedback = try context.fetchCount(FetchDescriptor<Feedback>())
+                let skills = try context.fetchCount(FetchDescriptor<SkillScore>())
+
+                if students == 0, classes == 0, feedback == 0, skills == 0 {
+                    print("DATA_RESET_COMPLETE students=0 classes=0 feedback=0 skills=0")
+                } else {
+                    print("DATA_RESET_FAILED students=\(students) classes=\(classes) feedback=\(feedback) skills=\(skills)")
+                }
+            } catch {
+                print("DATA_RESET_FAILED \(error)")
+            }
+            hasCompletedOnboarding = true
+            #endif
         }
     }
 }
