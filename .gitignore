@@ -24,6 +24,7 @@ GoogleService-Info.plist
 # Local helper scripts and nested site repo metadata
 renew.sh
 AppStore/site/.git/
+.worktrees/
 
 # macOS
 .DS_Store
